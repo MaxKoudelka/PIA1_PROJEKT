@@ -30,7 +30,7 @@ Konvekční koeficienty mohou být různé na různých stranách tělesa, což 
 
 **Výstup**
 
-Výstupem je .vtk soubor, který je možné otevřít skrze ParaView a zobrazit tak teplotní pole ve 3D, včetně řezů.
+Výstupem je .vtk soubor, který je možné otevřít v ParaView a zobrazit tak teplotní pole ve 3D, včetně řezů.
 
 <img width="898" height="596" alt="image" src="https://github.com/user-attachments/assets/7485ca17-a730-4ed8-9576-89c94a6e5a5b" />
 
