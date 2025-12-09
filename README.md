@@ -1,6 +1,6 @@
 Projekt vypracovala skupina Boháč, Bubeník, Koudelka
 
-Tento projekt se zabývá numerickým řešením stacionárního trojrozměrného vedení tepla v homogenním tělese, ve kterém je umístěn vnitřní tepelný zdroj. Cílem je simulovat ustálené rozložení teploty v doméně, tedy takový stav, kdy se teplota v čase již nemění.
+Tento projekt se zabývá numerickým řešením stacionárního trojrozměrného vedení tepla v homogenním tělese, ve kterém je umístěn vnitřní tepelný zdroj.
 
 **Matematický model**
 
@@ -18,6 +18,8 @@ Výsledný diskrétní systém rovnic je řešen pomocí Gauss–Seidelovy itera
 Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje sledovat průběh konvergence.
 
 (k vykreslení reziduí se používá gnuplot: **gnuplot ./plot_residuals.gnuplot** to vytvoří PNG obrázek s vykreslnými rezidui)
+</p>
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/af810a7a-d04c-4410-8356-e0144ceded27" />
 
 **Geometrie a fyzikální parametry**
 
