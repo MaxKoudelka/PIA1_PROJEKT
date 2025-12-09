@@ -19,8 +19,8 @@ Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje 
 
 (k vykreslení reziduí se používá gnuplot: **gnuplot ./plot_residuals.gnuplot** to vytvoří PNG obrázek s vykreslnými rezidui)
 </p>
-<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/af810a7a-d04c-4410-8356-e0144ceded27" />
-
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/af810a7a-d04c-4410-8356-e0144ceded27" />
+</p>
 **Geometrie a fyzikální parametry**
 
 Těleso má definované rozměry a počty uzlů v jednotlivých směrech. Z těchto parametrů se automaticky odvodí krok sítě (dx, dy, dz). Každý uzel obsahuje:
