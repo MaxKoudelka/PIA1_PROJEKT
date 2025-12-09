@@ -14,7 +14,7 @@ Prostorová doména je rozdělena na pravidelnou 3D mřížku. V každém jejím
 Výsledný diskrétní systém rovnic je řešen pomocí Gauss–Seidelovy iterační metody, která postupně aktualizuje odhad teploty ve všech vnitřních uzlech mřížky. Výpočet končí v okamžiku, kdy změna teploty mezi dvěma iteracemi klesne pod zadaný práh tolerance.
 Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje sledovat průběh konvergence.
 
-(k vykreslení reziduí slouží gnuplot: **gnuplot ./plot_residuals.gnuplot**)
+(k vykreslení reziduí se používá gnuplot: **gnuplot ./plot_residuals.gnuplot**)
 
 **Geometrie a fyzikální parametry**
 Těleso má definované rozměry a počty uzlů v jednotlivých směrech. Z těchto parametrů se automaticky odvodí krok sítě (dx, dy, dz). Každý uzel obsahuje:
