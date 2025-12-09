@@ -11,6 +11,7 @@ Fyzikálním základem úlohy je Poissonova rovnice pro stacionární vedení te
 V našem modelu je vnitřní zdroj umístěn do definované centrální oblasti tělesa.
 Na povrchu tělesa jsou uvažovány konvekční (Robinovy) okrajové podmínky, které popisují přestup tepla mezi povrchem a okolním prostředím. Tím je simulována situace, kdy těleso není tepelně izolované, ale odevzdává teplo do okolí.
 
+
 **Numerický postup**
 
 Prostorová doména je rozdělena na pravidelnou 3D mřížku. V každém jejím uzlu se numericky aproximuje Laplaceův operátor pomocí metody konečných rozdílů.
@@ -23,6 +24,7 @@ Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje 
 </p>
 Výpočet konverguje stabilně a reziduum postupně klesá, takže metoda evidentně funguje správně. Je ale vidět, že konvergence je pomalejší, což je u Gauss–Seidelovy metody v 3D běžné.
 
+
 **Geometrie a fyzikální parametry**
 
 Těleso má definované rozměry a počty uzlů v jednotlivých směrech. Z těchto parametrů se automaticky odvodí krok sítě (dx, dy, dz). Každý uzel obsahuje:
@@ -32,6 +34,7 @@ Těleso má definované rozměry a počty uzlů v jednotlivých směrech. Z těc
 - Fyzikální vlastnosti materiálu
 
 Konvekční koeficienty mohou být různé na různých stranách tělesa, což umožňuje simulovat například kontakt se vzduchem, podložkou nebo jiným prostředím.
+
 
 **Výstup**
 
