@@ -1,6 +1,7 @@
 Projekt vypracovala skupina Boháč, Bubeník, Koudelka
 
 Tento projekt se zabývá numerickým řešením stacionárního trojrozměrného vedení tepla v homogenním tělese, ve kterém je umístěn vnitřní tepelný zdroj.
+</p>
 
 **Matematický model**
 
@@ -10,7 +11,7 @@ Fyzikálním základem úlohy je Poissonova rovnice pro stacionární vedení te
 </p>
 V našem modelu je vnitřní zdroj umístěn do definované centrální oblasti tělesa.
 Na povrchu tělesa jsou uvažovány konvekční (Robinovy) okrajové podmínky, které popisují přestup tepla mezi povrchem a okolním prostředím. Tím je simulována situace, kdy těleso není tepelně izolované, ale odevzdává teplo do okolí.
-
+</p>
 
 **Numerický postup**
 
@@ -23,7 +24,7 @@ Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje 
 <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/af810a7a-d04c-4410-8356-e0144ceded27" />
 </p>
 Výpočet konverguje stabilně a reziduum postupně klesá, takže metoda evidentně funguje správně. Je ale vidět, že konvergence je pomalejší, což je u Gauss–Seidelovy metody v 3D běžné.
-
+</p>
 
 **Geometrie a fyzikální parametry**
 
@@ -34,7 +35,7 @@ Těleso má definované rozměry a počty uzlů v jednotlivých směrech. Z těc
 - Fyzikální vlastnosti materiálu
 
 Konvekční koeficienty mohou být různé na různých stranách tělesa, což umožňuje simulovat například kontakt se vzduchem, podložkou nebo jiným prostředím.
-
+</p>
 
 **Výstup**
 
