@@ -19,11 +19,9 @@ Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje 
 **Geometrie a fyzikální parametry**
 Těleso má definované rozměry a počty uzlů v jednotlivých směrech. Z těchto parametrů se automaticky odvodí krok sítě (dx, dy, dz). Každý uzel obsahuje:
 
-                                                                                                                                                - Teplotu
-                                                                                                                                                
-                                                                                                                                                - Případnou hodnotu zdroje
-                                                                                                                                                
-                                                                                                                                                - Fyzikální vlastnosti materiálu
+- Teplotu                                                                                                                      
+- Případnou hodnotu zdroje                                                                                                                                              
+- Fyzikální vlastnosti materiálu
 
 Konvekční koeficienty mohou být různé na různých stranách tělesa, což umožňuje simulovat například kontakt se vzduchem, podložkou nebo jiným prostředím.
 
