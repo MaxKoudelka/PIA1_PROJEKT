@@ -1,40 +1,25 @@
-Projekt vypracovala skupina Boháč, Bubeník, Koudelka. Projekt řeší problém stacionárního 3D vedení tepla v pravidelném homogenním tělese s vnitřním tepelným zdrojem.
-Cílem je numericky vyřešit Poissonovu rovnici:
-<img width="595" height="180" alt="image" src="https://github.com/user-attachments/assets/f1bd493a-a3e9-42d2-8665-c2b3f09f7aaf" />
+Projekt vypracovala skupina Boháč, Bubeník, Koudelka
 
+Tento projekt se zabývá numerickým řešením stacionárního trojrozměrného vedení tepla v homogenním tělese, ve kterém je umístěn vnitřní tepelný zdroj. Cílem je simulovat ustálené rozložení teploty v doméně, tedy takový stav, kdy se teplota v čase již nemění.
 
-Řešení je realizováno pomocí Gauss–Seidelovy iterační metody na pravidelné 3D mřížce.
+**Matematický model**
+Fyzikálním základem úlohy je Poissonova rovnice pro stacionární vedení tepla:
+<img width="331" height="95" alt="image" src="https://github.com/user-attachments/assets/d6c62021-0e05-45f2-ab23-0ff31953c8d4" />
 
-**Struktura kódu**
-1) GEOMETRICKÉ A FYZIKÁLNÍ PARAMETRY
-```cpp
-struct parametry {
+V našem modelu je vnitřní zdroj umístěn do definované centrální oblasti tělesa.
+Na povrchu tělesa jsou uvažovány konvekční (Robinovy) okrajové podmínky, které popisují přestup tepla mezi povrchem a okolním prostředím. Tím je simulována situace, kdy těleso není tepelně izolované, ale odevzdává teplo do okolí.
 
-    // Geometrie
-    double Lx = 0.1, Ly = 0.06, Lz = 0.01;
-    int Nx = 200, Ny = 100, Nz = 50;
+**Numerický postup**
+Prostorová doména je rozdělena na pravidelnou 3D mřížku. V každém jejím uzlu se numericky aproximuje Laplaceův operátor pomocí metody konečných rozdílů.
+Výsledný diskrétní systém rovnic je řešen pomocí Gauss–Seidelovy iterační metody, která postupně aktualizuje odhad teploty ve všech vnitřních uzlech mřížky. Výpočet končí v okamžiku, kdy změna teploty mezi dvěma iteracemi klesne pod zadaný práh tolerance.
+Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje sledovat průběh konvergence
+<k vykreslení reziduí slouží gnuplot: **gnuplot ./plot_residuals.gnuplot**>
 
-    // Odvozené geometrické parametry
-    double dx, dy, dz;
+**Geometrie a fyzikální parametry**
+Těleso má definované rozměry a počty uzlů v jednotlivých směrech. Z těchto parametrů se automaticky odvodí krok sítě (dx, dy, dz). Každý uzel obsahuje:
+                                                                                                                                                - Teplotu
+                                                                                                                                                - Případnou hodnotu zdroje
+                                                                                                                                                - Fyzikální vlastnosti materiálu
 
-    // Fyzikální parametry
-    double lambda = 0.4;    // [W/mK]
-    double rho = 1200.0;    // [kg/m3]
-    double cp = 1000.0;     // [J/kgK]
-    double Tinf = 293.15;   // [K]
-    double Q0 = 5e4;        // [W/m3]
+Konvekční koeficienty mohou být různé na různých stranách tělesa, což umožňuje simulovat například kontakt se vzduchem, podložkou nebo jiným prostředím.
 
-    // Konvekční koeficienty
-    double h_x = 2.0;
-    double h_y = 1.0;
-    double h_z = 3.0;
-    // Rozdílné konvekční koeficienty reprezentují polohu tělesa v prostoru  
-
-    // Konstruktor
-    parametry() {
-        dx = Lx / (Nx - 1);
-        dy = Ly / (Ny - 1);
-        dz = Lz / (Nz - 1);
-    }
-};
-```
