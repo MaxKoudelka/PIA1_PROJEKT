@@ -1,6 +1,6 @@
 Projekt vypracovala skupina Boháč, Bubeník, Koudelka. Projekt řeší problém stacionárního 3D vedení tepla v pravidelném homogenním tělese s vnitřním tepelným zdrojem.
 Cílem je numericky vyřešit Poissonovu rovnici:
-<img width="695" height="211" alt="image" src="https://github.com/user-attachments/assets/f1bd493a-a3e9-42d2-8665-c2b3f09f7aaf" />
+<img width="595" height="180" alt="image" src="https://github.com/user-attachments/assets/f1bd493a-a3e9-42d2-8665-c2b3f09f7aaf" />
 
 
 Řešení je realizováno pomocí Gauss–Seidelovy iterační metody na pravidelné 3D mřížce.
