@@ -21,6 +21,7 @@ Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje 
 </p>
 <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/af810a7a-d04c-4410-8356-e0144ceded27" />
 </p>
+Výpočet konverguje stabilně a reziduum postupně klesá, takže metoda evidentně funguje správně. Je ale vidět, že konvergence je pomalejší, což je u Gauss–Seidelovy metody v 3D běžné.
 
 **Geometrie a fyzikální parametry**
 
