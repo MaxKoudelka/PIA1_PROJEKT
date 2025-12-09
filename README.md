@@ -4,8 +4,10 @@ Tento projekt se zabývá numerickým řešením stacionárního trojrozměrnéh
 
 **Matematický model**
 
-Fyzikálním základem úlohy je Poissonova rovnice pro stacionární vedení tepla:<img width="331" height="95" alt="image" src="https://github.com/user-attachments/assets/d6c62021-0e05-45f2-ab23-0ff31953c8d4" />
-
+Fyzikálním základem úlohy je Poissonova rovnice pro stacionární vedení tepla:
+<p align="center">
+  <img width="331" height="95" src="https://github.com/user-attachments/assets/d6c62021-0e05-45f2-ab23-0ff31953c8d4" />
+</p>
 V našem modelu je vnitřní zdroj umístěn do definované centrální oblasti tělesa.
 Na povrchu tělesa jsou uvažovány konvekční (Robinovy) okrajové podmínky, které popisují přestup tepla mezi povrchem a okolním prostředím. Tím je simulována situace, kdy těleso není tepelně izolované, ale odevzdává teplo do okolí.
 
