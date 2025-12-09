@@ -12,7 +12,8 @@ Na povrchu tělesa jsou uvažovány konvekční (Robinovy) okrajové podmínky, 
 **Numerický postup**
 Prostorová doména je rozdělena na pravidelnou 3D mřížku. V každém jejím uzlu se numericky aproximuje Laplaceův operátor pomocí metody konečných rozdílů.
 Výsledný diskrétní systém rovnic je řešen pomocí Gauss–Seidelovy iterační metody, která postupně aktualizuje odhad teploty ve všech vnitřních uzlech mřížky. Výpočet končí v okamžiku, kdy změna teploty mezi dvěma iteracemi klesne pod zadaný práh tolerance.
-Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje sledovat průběh konvergence
+Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje sledovat průběh konvergence.
+
 (k vykreslení reziduí slouží gnuplot: **gnuplot ./plot_residuals.gnuplot**)
 
 **Geometrie a fyzikální parametry**
