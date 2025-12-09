@@ -4,8 +4,7 @@ Tento projekt se zabývá numerickým řešením stacionárního trojrozměrnéh
 
 **Matematický model**
 
-Fyzikálním základem úlohy je Poissonova rovnice pro stacionární vedení tepla:
-<img width="331" height="95" alt="image" src="https://github.com/user-attachments/assets/d6c62021-0e05-45f2-ab23-0ff31953c8d4" />
+Fyzikálním základem úlohy je Poissonova rovnice pro stacionární vedení tepla:<img width="331" height="95" alt="image" src="https://github.com/user-attachments/assets/d6c62021-0e05-45f2-ab23-0ff31953c8d4" />
 
 V našem modelu je vnitřní zdroj umístěn do definované centrální oblasti tělesa.
 Na povrchu tělesa jsou uvažovány konvekční (Robinovy) okrajové podmínky, které popisují přestup tepla mezi povrchem a okolním prostředím. Tím je simulována situace, kdy těleso není tepelně izolované, ale odevzdává teplo do okolí.
@@ -16,7 +15,7 @@ Prostorová doména je rozdělena na pravidelnou 3D mřížku. V každém jejím
 Výsledný diskrétní systém rovnic je řešen pomocí Gauss–Seidelovy iterační metody, která postupně aktualizuje odhad teploty ve všech vnitřních uzlech mřížky. Výpočet končí v okamžiku, kdy změna teploty mezi dvěma iteracemi klesne pod zadaný práh tolerance.
 Součástí řešení je i výpočet rezidua (residuals.csv), které umožňuje sledovat průběh konvergence.
 
-(k vykreslení reziduí se používá gnuplot: **gnuplot ./plot_residuals.gnuplot**)
+(k vykreslení reziduí se používá gnuplot: **gnuplot ./plot_residuals.gnuplot** to vytvoří PNG obrázek s vykreslnými rezidui)
 
 **Geometrie a fyzikální parametry**
 
